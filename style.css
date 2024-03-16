@@ -1,0 +1,86 @@
+.pop {
+    font-family: "Poppins", sans-serif;
+}
+
+.mont {
+
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+input {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+input:focus {
+    outline: 2px solid white;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Button on top of the Input */
+.wrapper {
+    width: 400px;
+    max-width: 100%;
+    position: relative;
+}
+
+@media only screen and (max-width: 600px) {
+    .wrapper {
+        width: 190px;
+        max-width: 100%;
+        position: relative;
+    }
+
+    .wrapper input {
+        background: white;
+        border: 2px solid white;
+        border-radius: 30px;
+        padding: 1rem 2rem;
+        width: 160%;
+    }
+
+    .wrapper button {
+        background: #A8E726;
+        border-radius: 30px;
+        aspect-ratio: 1;
+        height: 80%;
+        width: 70%;
+        position: absolute;
+        top: 10%;
+        left: 120%;
+    }
+}
+
+.wrapper input {
+    background: white;
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    width: 160%;
+}
+
+.wrapper button {
+    background: #A8E726;
+    border-radius: 50px;
+    aspect-ratio: 1;
+    height: 80%;
+    width: 30%;
+    position: absolute;
+    top: 10%;
+    right: -230px;
+}
+
+
