@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Think AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+    
+button {
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+input {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+input:focus {
+    outline: 2px solid white;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Button on top of the Input */
+.wrapper {
+    width: 400px;
+    max-width: 100%;
+    position: relative;
+}
+@media only screen and (max-width: 600px){
+    .wrapper {
+    width: 170px;
+    max-width: 100%;
+    position: relative;
+} 
+.wrapper input {
+    background: white;
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 1rem 2rem;
+    width: 160%;
+}
+.wrapper button {
+    background: #A8E726;
+    border-radius: 30px;
+    aspect-ratio: 1;
+    height: 80%;
+    width: 70%;
+    position: absolute;
+    top: 10%;
+    left: 120%;
+}
+}
+.wrapper input {
+    background: white;
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    width: 160%;
+}
+
+.wrapper button {
+    background: #A8E726;
+    border-radius: 50px;
+    aspect-ratio: 1;
+    height: 80%;
+    width: 30%;
+    position: absolute;
+    top: 10%;
+    right: -230px;
+}
+</style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="./assets/THINK AI.svg" type="image/x-icon">
+   <style>
+    .pop{
+        font-family: "Poppins", sans-serif;
+    }
+    .mont{
+        
+  font-family: "Montserrat Alternates", sans-serif;
+    }
+    
+   </style>
+</head>
+
+<body class="bg-[#1f1f1f]">
+  <header class="relative">
+     <nav
+        class=" sticky top-0
+          flex flex-wrap
+          items-center
+          justify-between
+          w-full
+          py-4
+          md:py-0
+          px-4
+          bg-[#1f1f1f] z-10
+          text-lg text-gray-700
+        "
+      >
+       <div>
+          <a href="#">
+            <img src="./assets/THINK AI.svg" class="w-24 md:w-40" alt="">
+          </a>
+        </div>
+          <img src="./assets/menu.svg" id="menu-button" class="w-10 cursor-pointer md:hidden block" alt="">
+       <div class="hidden w-full z-16 md:flex md:items-center md:w-auto" id="menu">
+          <ul
+            class="
+              pt-4
+              text-base text-[#ffff]
+              md:flex
+              md:justify-between 
+              md:pt-0"
+          >
+            <li>
+              <a class="md:p-4 py-2 block hover:text-purple-400" href="#"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a class="md:p-4 py-2 block hover:text-purple-400" href="#"
+                >Our Vision</a
+              >
+            </li>
+            <li>
+              <a class="md:p-4 py-2 block hover:text-purple-400" href="#"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a class="md:p-4 py-2 block hover:text-purple-400" href="#"
+                >Contact us</a
+              >
+            </li>
+          </ul>
+        </div>
+    </nav>
+  </header>
+  <main>
+    <img src="./assets/bg.svg" class="h-[90vh] absolute md:left-[30vw]  w-100% bg-no-repeat bg-center md:block hidden z-[-10]">
+    <img src="./assets/bgmobile.svg" class="h-[90vh] absolute md:left-[30vw]  w-100% bg-no-repeat bg-center block md:hidden z-[-10]"
+    alt="">
+    <div class="flex mt-10 flex-col gap-4 md:gap-10 h-100% justify-center items-center">
+        <div class="what text-[#ffff] pop md:text-2xl text-sm font-semibold  antialiased">What we do?</div>
+        <div class="what text-[#ffff] mont text-md leading-loose md:text-5xl font-bold antialiased text-center">Thinkable generative Ai that makes <br> idea and personized innovation for <br> everyone</div>
+        <div class="join text-[#B0B0B0] mont text-sm font-bold antialiased text-center">Join us</div>
+         <div class="button flex mt-10 justify-center items-center ml-1 gap-10">
+            <div class="bg-[#333333] rounded-2xl hover:bg-[#A8E726] hover:text-[#333333] text-[#ffff] p-5  pop md:text-xl text-xs font-medium antialiased">as Developer
+            </div> <div class="bg-[#333333] border border-[#A8E726] hover:bg-[#A8E726] hover:text-[#333333] rounded-2xl  bg-transparent text-[#ffff] p-4  pop md:text-xl text-xs font-medium antialiased">in Organization
+            </div>  </div>  
+    </div>
+
+</div>
+  </main>
+
+  <div class="vision relative top-[24vh] h-[100vh] mt-[32vh]">
+    <img src="./assets/dot1.svg" class="z-[-7] absolute" alt="">
+    <img src="./assets/dot2.svg" class="z-[-7] absolute right-0 bottom-0" alt="">
+   
+    <div class="mont text-center text-[#A8E726] font-bold md:text-3xl text-lg">Our Vision</div>
+    <div class="absolute bg-[#333333] w-[80vw] rounded-lg h-[50vh] md:top-[20%] top-[5%] ml-[10vw] text-center flex justify-center items-center"><div class="pop text-[#ffff] w-[80%] text-sm md:text-3xl">Imagine AI that not only processes data but also thinks, reasons, and learns independently. This is the future we're creating at THINK AI—a world where machines are not just tools but intelligent partners in innovation.</div></div>
+
+</div>
+<div class="vision relative  h-[100vh] mt-[32vh]">
+    <img src="./assets/dot1.svg" class="z-[-7] absolute" alt="">
+    <img src="./assets/dot2.svg" class="z-[-7] absolute right-0 bottom-0" alt="">
+    <div class="mont text-center text-[#A8E726] font-bold md:text-3xl mb-3 md:mb-9 mt-4 text-lg">What Sets Us Apart</div>
+    <div class="bg-[#333333] w-[80%] rounded-lg p-5 absolute ml-[10%] ">
+        <div class="flex flex-col gap-2 md:gap-4">
+            <div class="flex flex-col gap-2 md:gap-6">
+                <div class="flex  items-center gap-2 pt-2">
+                    <img src="./assets/Ellipse 1.svg" class="w-[9px] md:w-" alt="">
+                    <div class="text-xs text-[#ffff] md:text-3xl font-semibold">AI Empowered with Human Thought</div>
+                </div>
+                <div class="text-xs md:text-2xl text-[#ffff] font-light ml-5">
+                    Our AI systems go beyond conventional programming, incorporating advanced cognitive processes that enable independent decision-making and problem-solving.
+                </div>
+            </div>
+            <div class="flex flex-col gap-2 md:gap-8">
+                <div class="flex  items-center gap-2 pt-2">
+                    <img src="./assets/Ellipse 1.svg" class="w-[9px] md:w-" alt="">
+                    <div class="text-xs text-[#ffff] md:text-3xl font-semibold">Continuous Innovation</div>
+                </div>
+                <div class="text-xs md:text-2xl text-[#ffff] font-light ml-5">
+                    We're committed to continuous research and development, pushing the boundaries of what AI can achieve and ensuring that our solutions remain at the forefront of technological advancement.   </div>
+            </div>
+            <div class="flex flex-col gap-2 md:gap-6">
+                <div class="flex  items-center gap-2 pt-2">
+                    <img src="./assets/Ellipse 1.svg" class="w-[9px] md:w-" alt="">
+                    <div class="text-xs text-[#ffff] md:text-3xl font-semibold">Industry Impact</div>
+                </div>
+                <div class="text-xs md:text-2xl text-[#ffff] font-light ml-5">
+                    From healthcare and finance to manufacturing and beyond, Think AI solutions are tailored to meet the unique challenges of various industries, driving efficiency, productivity, and innovation.   </div>
+        </div>
+    </div>  
+</div>
+  
+
+</div>
+
+<div class="h-[90vh]">
+    
+    <div class="mont text-center text-[#A8E726]  font-bold md:text-3xl text-lg">Contact us</div>
+    <div class="flex justify-around md:justify-between md:w-[80%] md:ml-[10%] items-center h-[100%] md:flex-row flex-col ">
+        <div class="flex flex-col justify-center items-center  gap-5 md:gap-6">
+            <img src="./assets/bxs_phone-call.svg" class="w-14 md:w-24" alt="">
+            <div class="text-[#ffff] text-xs md:text-2xl">+91 1234567890</div>
+        </div>
+        <div class="flex flex-col justify-center items-center gap-5 md:gap-6">
+            <img src="./assets/ic_sharp-email.svg" class="w-14 md:w-24" alt="">
+            <div class="text-[#ffff] text-xs md:text-2xl">your@gmail.com</div>
+        </div>
+        <div class="flex flex-col justify-center items-center gap-5 md:gap-6">
+            <img src="./assets/carbon_location-filled.svg" class="w-14 md:w-24" alt="">
+            <div class="text-[#ffff] text-xs md:text-md text-center">132 Dartmouth Street Boston, <br> Massachusetts 02156 United States</div>
+        </div>
+    </div>
+
+</div>
+<div class="h-[90vh]   relative md:block hidden">
+    <div class="w-[55%] bg-[#333333] h-[90vh] absolute right-0 z-[-2]"></div>
+    <div class="ml-24">
+    <div class="text-[#A8E726] mont font-bold text-7xl">Sign up to get <br> early access</div>
+    <div class="text-[#B0B0B0] text-xl mt-5">Get update about our product on your email, no <br> spam guaranteed we promise ✌️</div>
+    <div class="wrapper mt-16">
+        <input type="text" placeholder="Enter your email" />
+        <button>
+            Join
+            </svg>
+        </button>
+    </div>
+</div>
+<hr class="border border-[#A8E726] mt-48">
+<div class="w-[80vw] ml-[10vw] flex justify-between mt-5">
+    <div class="text-[#E0DFFE]">© 2023 — Copyright</div>
+    <div class="text-[#E0DFFE]">Privacy Policy</div>
+</div>
+</div>
+</div>
+<div class=" mt-24 relative md:hidden block">
+    <div class="ml-4">
+    <div class="text-[#A8E726] mont font-bold text-2xl">Sign up to get <br> early access</div>
+    <div class="text-[#B0B0B0] text-xs mt-5">Get update about our product on your email, no <br> spam guaranteed we promise ✌️</div>
+    <div class="wrapper mt-16">
+        <input type="text" placeholder="Enter your email" />
+        <button>
+            Join
+        </button>
+    </div>
+</div>
+<hr class="border border-[#A8E726] mt-48">
+<div class="w-[80vw] ml-[10vw] flex justify-between mt-5">
+    <div class="text-[#E0DFFE] text-sm">© 2023 — Copyright</div>
+    <div class="text-[#E0DFFE] text-sm">Privacy Policy</div>
+</div>
+</div>
+  <script>
+    const button = document.querySelector('#menu-button');
+const menu = document.querySelector('#menu');
+
+
+button.addEventListener('click', () => {
+  menu.classList.toggle('hidden');
+});
+
+  </script>
+</body>
+
+</html>
