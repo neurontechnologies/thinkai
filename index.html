@@ -23,7 +23,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 <body class="bg-[#1f1f1f]">
   <header class="relative">
      <nav
-        class=" sticky top-0
+        class="fixed top-0
           flex flex-wrap
           items-center
           justify-between
@@ -31,7 +31,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
           py-4
           md:py-0
           px-4
-          bg-[#1f1f1f] z-10
+          bg-transparent z-10
           text-lg text-gray-700 
         "
       >
@@ -41,7 +41,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
           </a>
         </div>
           <img src="./assets/menu.svg" id="menu-button" class="w-10 cursor-pointer md:hidden block" alt="">
-       <div class="hidden w-full z-16 md:flex md:items-center md:w-auto" id="menu">
+       <div class="hidden transition-all top-[-100] w-full z-16 md:flex md:items-center md:w-auto" id="menu">
           <ul
             class="
               pt-4
@@ -51,22 +51,22 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
               md:pt-0"
           >
             <li>
-              <a class="md:p-4 py-2 block hover:text-purple-400" href="#"
+              <a class="md:p-4 py-2 block hover:text-[#A8E726]" href="#home"
                 >Home</a
               >
             </li>
             <li>
-              <a class="md:p-4 py-2 block hover:text-purple-400" href="#"
+              <a class="md:p-4 py-2 block hover:text-[#A8E726]" href="#vision"
                 >Our Vision</a
               >
             </li>
             <li>
-              <a class="md:p-4 py-2 block hover:text-purple-400" href="#"
+              <a class="md:p-4 py-2 block hover:text-[#A8E726]" href="#feature"
                 >Features</a
               >
             </li>
             <li>
-              <a class="md:p-4 py-2 block hover:text-purple-400" href="#"
+              <a class="md:p-4 py-2 block hover:text-[#A8E726]" href="#contact"
                 >Contact us</a
               >
             </li>
@@ -74,32 +74,36 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         </div>
     </nav>
   </header>
-  <main>
-    <img src="./assets/bg.svg" class="h-[90vh] absolute md:left-[30vw]  w-100% bg-no-repeat bg-center md:block hidden z-[-10]">
+  <main id="home">
+    <div class="overlay md:block hidden"></div>
+    <video class="full-screen-video md:block hidden z-[-10]" autoplay muted loop >
+      <source src="./assets/pexels-mikhail-nilov-7534239 (1080p).mp4" type="video/mp4">
+      Your browser does not support the video tag.
+  </video>
     <img src="./assets/bgmobile.svg" class="h-[90vh] absolute md:left-[30vw]  w-100% bg-no-repeat bg-center block md:hidden z-[-10]"
     alt="">
-    <div class="flex  animate__animated animate__slideInUp mt-10 flex-col gap-4 md:gap-10 h-100% justify-center items-center">
+    <div class="flex  animate__animated animate__slideInUp md:mt-24 mt-48 flex-col gap-12 md:gap-12 h-100% justify-center items-center">
         <div class="what text-[#ffff] pop md:text-2xl text-sm font-semibold  antialiased">What we do?</div>
-        <div class="what text-[#ffff] mont text-md leading-loose md:text-5xl font-bold antialiased text-center">Thinkable generative Ai that makes <br> idea and personized innovation for <br> everyone</div>
-        <div class="join text-[#B0B0B0] mont text-sm font-bold antialiased text-center">Join us</div>
+        <div class="what text-[#ffff] mont text-md tex font-bold antialiased text-center las">Thinkable generative Ai that makes <br> idea and personized innovation for <br> everyone</div>
+        <div class="join text-[#E0DFFE] mont text-sm md:text-md font-bold antialiased text-center">Join us</div>
          <div class="button flex mt-10 justify-center items-center ml-1 gap-10">
-            <div class="bg-[#333333] rounded-2xl hover:bg-[#A8E726] hover:text-[#333333] text-[#ffff] p-5  pop md:text-xl text-xs font-medium antialiased">as Developer
-            </div> <div class="bg-[#333333] border border-[#A8E726] hover:bg-[#A8E726] hover:text-[#333333] rounded-2xl  bg-transparent text-[#ffff] p-4  pop md:text-xl text-xs font-medium antialiased">in Organization
+            <div class="but1 text-[#1f1f1f]   pop md:text-lg text-xs font-medium antialiased">as Developer
+            </div> <div class="but2 text-[#1f1f1f]   pop md:text-lg text-xs font-medium antialiased">in Organization
             </div>  </div>  
     </div>
 
 </div>
   </main>
 
-  <div class="vision relative top-[24vh] h-[100vh] mt-[32vh]">
+  <div id="vision" class="vision relative top-[24vh] md:h-[100vh] h-[80vh] md:mb-48 mb-0 mt-[30vh] md:mt-0">
     <img src="./assets/dot1.svg" class="z-[-7] absolute" alt="">
     <img src="./assets/dot2.svg" class="z-[-7] absolute right-0 bottom-0" alt="">
    
     <div class="mont text-center text-[#A8E726] font-bold md:text-3xl text-lg">Our Vision</div>
-    <div class="absolute bg-[#333333] w-[80vw] rounded-lg h-[50vh] md:top-[20%] top-[5%] ml-[10vw] text-center flex justify-center items-center animate__animated animate__slideInUp animate__delay-1s"><div class="pop text-[#ffff] w-[80%] text-sm md:text-3xl">Imagine AI that not only processes data but also thinks, reasons, and learns independently. This is the future we're creating at THINK AI—a world where machines are not just tools but intelligent partners in innovation.</div></div>
+    <div class="absolute bg-[#333333] w-[80vw] rounded-lg h-[50vh] md:top-[20%] top-[5%] ml-[10vw] text-center flex justify-center items-center animate__animated animate__slideInUp animate__delay-1s"><div class="pop text-[#ffff] bs">Imagine AI that not only processes data but also thinks, reasons, and learns independently. This is the future we're creating at THINK AI—a world where machines are not just tools but intelligent partners in innovation.</div></div>
 
 </div>
-<div class="vision relative  h-[100vh] mt-[32vh]">
+<div id="feature" class="vision relative  md:h-[100vh] h-[60vh] md:mb-36 mb-0 md:mt-0 mt-[20vh]">
     <img src="./assets/dot1.svg" class="z-[-7] absolute" alt="">
     <img src="./assets/dot2.svg" class="z-[-7] absolute right-0 bottom-0" alt="">
     <div class="mont text-center text-[#A8E726] font-bold md:text-3xl mb-3 md:mb-9 mt-4 text-lg">What Sets Us Apart</div>
@@ -136,7 +140,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 
 </div>
 
-<div class="h-[90vh]">
+<div class="h-[80vh] mt-0 " id="contact">
     
     <div class="mont text-center text-[#A8E726]  font-bold md:text-3xl text-lg">Contact us</div>
     <div class="flex justify-around md:justify-between md:w-[80%] md:ml-[10%] items-center animate__animated animate__slideInUp animate__delay-3s h-[100%] md:flex-row flex-col ">
@@ -155,7 +159,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     </div>
 
 </div>
-<div class="h-[90vh]   relative md:block hidden">
+<div class="h-[90vh] relative md:block hidden">
     <div class="w-[55%] bg-[#333333] h-[90vh] absolute right-0 z-[-2]"></div>
     <div class="ml-24">
     <div class="text-[#A8E726] mont font-bold text-7xl">Sign up to get <br> early access</div>
