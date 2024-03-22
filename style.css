@@ -1,3 +1,6 @@
+*{
+    scroll-behavior:smooth;
+}
 .pop {
     font-family: "Poppins", sans-serif;
 }

@@ -42,7 +42,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
             <img src="./assets/THINK AI.svg" class="w-24 md:w-40" alt="THINKING AI">
           </a>
         </div>
-          <img src="./assets/menu.svg" id="menu-button" class="w-10 cursor-pointer md:hidden block" alt="menu">
+          <img src="./assets/menu.svg" id="menu-button" class="w-10 men cursor-pointer md:hidden block" alt="menu">
+          <i class="fa-solid fa-xmark  clo md:hidden hidden" style="color: #ffffff;" id="menu-button"></i>
        <div class="tran md:static absolute left-0 top-[-1500px] w-full z-16 md:flex md:items-center md:w-auto" id="menu">
           <ul
             class="
@@ -88,19 +89,19 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         <div class="what text-[#ffff] pop md:text-2xl text-sm font-medium  antialiased">What We Do?</div>
         <div class="what text-[#ffff] mont text-md tex font-bold antialiased text-center las">Thinkable Generative-AI that Makes <br> Idea and Personized Innovation for <br> Everyone</div>
         <div class="join text-[#E0DFFE] mont text-sm md:text-md font-bold antialiased text-center">Join us</div>
-         <div class="button flex mt-10 justify-center items-center ml-1 gap-24">
+         <div class="button flex mt-10 justify-center items-center ml-1 gap-20">
             <div class="but1 text-[#1f1f1f]   pop md:text-lg text-xs font-medium antialiased">as Developer
             </div> <div class="but2 text-[#1f1f1f]   pop md:text-lg text-xs font-medium antialiased">in Organization
             </div>  </div>  
     </div>
 </div>
-<a href="#vision"><i class="fa-solid fa-arrow-down absolute bottom-4 left-[48%] md:hidden block" style="color: #ffffff;background-color: black; border-radius: 50%; padding: 4px;height: 20px; width: 20px;"></i>
+<a href="#vision"><i class="fa-solid fa-arrow-down absolute bottom-4 left-[45%] md:hidden block text-center" style="color: #ffffff;background-color: black; border-radius: 50%; padding: 20px"></i>
 </a>
   </main>
   
-  <div id="vision" class="vision relative md:top-[15vh] top-[17vh] md:h-[100vh] h-[110vh] md:mb-48 mb-0 mt-[26vh] md:mt-0">
+  <div id="vision" class="vision relative md:top-[15vh] top-[17vh] md:h-[100vh] h-[110vh] md:mb-48 mb-[-20vh] mt-[26vh] md:mt-0">
     <img src="./assets/dot1.svg" class="z-[-7] absolute" alt="..">
-    <img src="./assets/dot2.svg" class="z-[-7] absolute right-0 bottom-0" alt="..">
+    <img src="./assets/dot2.svg" class="z-[-7] absolute right-0 bottom-0 md:mb-0 mb-[20vh]" alt="..">
     <div class="mont text-center text-[#A8E726] font-bold md:text-3xl text-lg">Our Vision</div>
     
     <div class="absolute  w-[80vw] h-[50vh] ro h-fit md:top-[20%] top-[10%] ml-[10vw]  flex justify-around items-center md:flex-row flex-col mb-5 md:gap-5 gap-5 animate__animated animate__slideInUp animate__delay-1s"><video width="320" height="320" class="rounded-lg" controls autoplay muted>
@@ -110,7 +111,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     </div>
     
 </div>
-<div id="feature" class="vision relative  md:h-[100vh] h-[80vh] md:mb-36 mb-4 md:mt-0 mt-[20vh] border-t-2 pt-10 border-[#ffffff]">
+<div id="feature" class="vision relative  md:h-[100vh] h-[80vh] md:mb-36 mb-0 md:mt-0 mt-[20vh] border-t-2 pt-10 border-[#ffffff]">
     <img src="./assets/dot1.svg" class="z-[-7] absolute" alt="..">
     <img src="./assets/dot2.svg" class="z-[-7] absolute right-0 bottom-0" alt="..">
     <div class="mont text-center text-[#A8E726] font-bold md:text-3xl mb-10 md:mb-16 mt-4 text-lg">What Sets Us Apart</div>
@@ -148,7 +149,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 
 </div>
 
-<div class="h-[80vh] mt-24 border-t-2 pt-10 border-[#ffffff]" id="contact">
+<div class="h-[80vh] mt-10 border-t-2 pt-10 border-[#ffffff]" id="contact">
     <div class="mont text-center text-[#A8E726]  font-bold md:text-3xl text-lg ">Contact us</div>
     <div class="flex justify-around md:justify-between md:w-[80%] md:ml-[10%] items-center animate__animated animate__slideInUp animate__delay-3s h-[100%] md:flex-row flex-col ">
         <div class="flex flex-col justify-center items-center  gap-5 md:gap-6">
@@ -204,21 +205,33 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 </div>
 </div>
   <script>
-    const button = document.querySelector('#menu-button');
+    const button = document.querySelectorAll('#menu-button');
 const menu = document.querySelector('#menu');
-
-
-button.addEventListener('click', () => {
+const clo=document.querySelector(".clo")
+const men=document.querySelector(".men")
+button.forEach(element => {
+  element.addEventListener('click', () => {
   if(menu.classList.contains('top-[-1500px]')){
     menu.classList.add('top-11');
     menu.classList.remove('top-[-1500px]');
+    men.classList.remove("block");
+    men.classList.add("hidden");
+    clo.classList.remove("hidden");
+    clo.classList.add("block");
+
   }
   else{
     menu.classList.remove('top-11');
     menu.classList.add('top-[-1500px]');
+    clo.classList.remove("block");
+    clo.classList.add("hidden"); 
+    men.classList.remove("hidden");
+    men.classList.add("block");
   }
  
 });
+});
+
 
   </script>
 </body>
